@@ -1,5 +1,5 @@
 class BetweenController < ApplicationController
-
+	before_action :authenticate_user!
 	def new
 	end
 
@@ -12,6 +12,10 @@ class BetweenController < ApplicationController
 
 	def show
 		@between = Between.find(params[:id])
+	end
+
+	def index
+		@between = Between.all
 	end
 
 private

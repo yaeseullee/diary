@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+	before_action :authenticate_user!
 	def create
 		@between = Between.find(params[:between_id])
 		@comment = @between.comments.create(comment_params)
