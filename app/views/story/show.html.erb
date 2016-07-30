@@ -1,6 +1,6 @@
+<div class="story">
 <p>
-	<strong>Image:</strong>
-	<%= image_tag @story.photo %>
+	<%= image_tag @story.photo,:width => 400  %>
 </p>
 
 <p>
@@ -14,5 +14,5 @@
 </p>
 
 <%= link_to 'Back', story_index_path %>
-
+</div>
 

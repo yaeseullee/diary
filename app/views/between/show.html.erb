@@ -1,39 +1,36 @@
-<p>
-	<string>Image:</string>
-	<%= image_tag @between.photo %>
-</p>
-<p>
-	<strong>Title:</strong>
-	<%= @between.title %>
-</p>
-<p>
-	<strong>Text:</strong>
-	<%= @between.text %>
-</p>
+<div class="between">
+	<p>
+		<%= image_tag @between.photo, :width => 400 %>
+	</p>
+	<p>
+		<strong>Title:</strong>
+		<%= @between.title %>
+	</p>
+	<p>
+		<strong>Text:</strong>
+		<%= @between.text %>
+	</p>
+</div>
 
-<h2>Comments</h2>
+<div class="comment">
+<h4>Comments</h4>
 <% @between.comments.each do |comment| %>
 	<p>
-		<strong>Commenter:</strong>
-		<%= comment.commenter %>
-	</p>
-	<p>
-		<strong>Comment:</strong>
+		<strong><%= current_user.email  %>:</strong>
 		<%= comment.body %>
 	</p>
+
 <% end %>
 
-<h2>Add a comment:</h2>
+<br><h4>Add a comment:</h4>
 <%= form_for([@between, @between.comments.build]) do |f| %>
+	
 	<p>
-		<%= f.label :commenter %><br>
-		<%= f.text_field :commenter %>
-	</p>
-	<p>
-		<%= f.label :body %><br>
+		<%= f.label :comment %><br>
 		<%= f.text_area :body %>
 	</p>
 	<p>
 		<%= f.submit %>
 	</p>
 <% end %>
+</div>

@@ -5,9 +5,46 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style>
+  .jumbotron {text-align:center;
+  	height:300px;
+  	font-family: 'Lobster', cursive;
+  	font-weight:lighter;
+  
+}
+  .log_in {text-align:center;
+  	font-family: 'Jeju Gothic', serif;
+  }
+  .story {text-align:center;
+  	font-family: 'Jeju Gothic', serif;}
+  .between {text-align:center;
+  	font-family: 'Jeju Gothic', serif;}
+  .comment {position:absolute; left:20px;}
+  
+  table{width:60;
+  	margin:auto;
+  	text-align:left;}
+
+  </style>
 </head>
 <body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://localhost:3000">Home</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="http://localhost:3000/story">My diary</a></li>
+      <li><a href="http://localhost:3000/between">Between diary</a></li> 
+      </ul>
+     </div>
+     </nav>
 
+<div class="jumbotron">
+  <h1>Belong to You</h1>
+
+</div>
+ 
 <%= yield %>
 
 </body>

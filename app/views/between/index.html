@@ -1,0 +1,19 @@
+<div class="between">
+<h1>Between diary</h1> 
+<table>
+  <tr>
+    <th class="col-xs-3">Title</th>
+    <th class="col-xs-6">Text</th>
+  </tr>
+ 
+  <% @between.each do |between| %>
+    <tr>
+      <td class="col-xs-3"><%= between.title %></td>
+      <td class="col-xs-6"><%= between.text %></td>
+      <td><%= link_to 'Show', between_path(between) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New between', new_between_path %>
+</div>

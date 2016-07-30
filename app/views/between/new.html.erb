@@ -1,10 +1,7 @@
 
-<h1>Between You and I</h1>
+<div class="between">
+<h1>Between diary</h1>
 <%= form_for :between, url: between_index_path do |f| %>
-
-	<p>
-		<%= f.label :photo %><br>
-		<%= f.file_field :photo %>
 
 	<p>
 		<%= f.label :title %><br>
@@ -17,6 +14,12 @@
 	</p>
 
 	<p>
+    	<%= f.label :photo %><br>
+    	<center><%= f.file_field :photo %></center>
+  	</p>
+
+	<p>
 		<%= f.submit %>
 	</p>
 <% end %>
+</div>

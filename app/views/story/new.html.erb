@@ -1,11 +1,10 @@
+<div class="story">
 <h1>Today's story</h1>
+
 <%= form_for :story, url: story_index_path do |f| %>
+  
   <p>
-    <%= f.label :photo %><br>
-    <%= f.file_field :photo %>
-  </p> 
-  <p>
-    <%= f.label :title %><br>
+    <br><%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
  
@@ -14,7 +13,13 @@
     <%= f.text_area :text %>
   </p>
  
+ <p>
+    <%= f.label :photo %><br>
+    <center><%= f.file_field :photo %></center>
+  </p> 
+  
   <p>
-    <%= f.submit %>
+    <br><%= f.submit %>
   </p>
 <% end %>
+</div>
