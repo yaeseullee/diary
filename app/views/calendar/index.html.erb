@@ -1,6 +1,9 @@
 <h1>belong to you</h1>
 <% if user_signed_in? %>
   <p><%= current_user.email %></p>
+  <div>
+ <p><%= image_tag(current_user.avatar, :width => 200) %></p>
+ </div>
   <p><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></p>
 <% else %>
   <p><%= link_to "로그인", new_user_session_path %></p>
