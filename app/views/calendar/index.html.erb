@@ -1,10 +1,17 @@
+<div class="container">
+	<div class = "log_in">
+		<% if user_signed_in? %>
+		  <p><%= current_user.email %></p>
+		  <p><%= image_tag(current_user.avatar, :width => 200) %></p>
+		  <p><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></p>
+		<% else %>
+		  <p><%= link_to "로그인", new_user_session_path %></p>
+		<% end %>
+	</div>
 
-<div class = "log_in">
-	<% if user_signed_in? %>
-	  <p><%= current_user.email %></p>
-	  <p><%= image_tag(current_user.avatar, :width => 200) %></p>
-	  <p><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></p>
-	<% else %>
-	  <p><%= link_to "로그인", new_user_session_path %></p>
+	<%= month_calendar do |date| %>
+	  
+	  <%= date.strftime("%d") %>
+	  
 	<% end %>
 </div>

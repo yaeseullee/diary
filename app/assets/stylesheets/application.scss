@@ -3,3 +3,41 @@
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
+
+
+.jumbotron {
+	background-image: url("/assets/belong_to_you_background.jpg"); background-size: 300px 300px;
+	background-repeat: repeat-x
+}
+
+.simple-calendar {
+  .day {
+  	border: 1px solid #E8D1D5;
+  	height: 100px;
+  	min-width: 100px;	
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}s
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {color:white;}
+  .next-month {color:white; }
+  .current-month {}
+
+  .has-events {}
+
+  .calendar-heading{
+  font-size:35px; font-family:andele mono
+  }
+}
+.belong_to_you{color:#FC8FFF;}
