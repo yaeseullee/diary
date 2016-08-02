@@ -17,8 +17,7 @@
   	font-family: 'Jeju Gothic', serif;}
   .between {text-align:center;
   	font-family: 'Jeju Gothic', serif;}
- .comment {position:absolute; left:20px;}
-  
+ 
   
   table{width:100;
   	margin:auto;
@@ -26,6 +25,10 @@
     top:50px;}
   textarea{width:500px;height:200px;}
   
+  body {
+    margin: 0 auto;
+    max-width: 80em;
+  }
 
   </style>
 </head>
@@ -39,12 +42,11 @@
       <li><a href="http://localhost:3000/story">My diary</a></li>
       <li><a href="http://localhost:3000/between">Between diary</a></li> 
       </ul>
-     </div>
-     </nav>
+  </div>
+</nav>
 
 <div class="jumbotron">
   <h1 class="belong_to_you">Belong to You</h1>
-
 </div>
  
 <%= yield %>

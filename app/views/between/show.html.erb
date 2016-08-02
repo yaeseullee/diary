@@ -1,3 +1,4 @@
+
 <div class="between">
 	<p>
 		<%= image_tag @between.photo, :width => 400 %>
@@ -16,7 +17,7 @@
 <h4>Comments</h4>
 <% @between.comments.each do |comment| %>
 	<p>
-		<strong><%= current_user.email  %>:</strong>
+		<strong><%= comment.commenter %>:</strong>
 		<%= comment.body %>
 	</p>
 <% end %>
@@ -24,7 +25,7 @@
 <br><h4>Add a comment:</h4>
 <%= form_for([@between, @between.comments.build]) do |f| %>
 	
-	<p>
+	<p>	
 		<%= f.label :comment %><br>
 		<%= f.text_area :body %>
 	</p>
