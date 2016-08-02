@@ -4,9 +4,8 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 
-
 .jumbotron {
-	background-image: url("/assets/belong_to_you_background.jpg"); background-size: 300px 300px;
+	background-image: url("/assets/jumbotronimage.jpeg"); background-size: 300px 300px;
 	background-repeat: repeat-x
 }
 
@@ -37,8 +36,10 @@
   .has-events {}
 
   .calendar-heading{
-  font-size:35px; font-family:andele mono
+  font-size:35px; font-family:andele mono; text-align:center;
   }
 }
-.belong_to_you{color:#FC8FFF;}
+
 .container{background:#FFF7D9}
+
+.belong_to_you{color:white;}

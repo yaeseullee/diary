@@ -19,7 +19,6 @@
 		<strong><%= current_user.email  %>:</strong>
 		<%= comment.body %>
 	</p>
-
 <% end %>
 
 <br><h4>Add a comment:</h4>
@@ -33,4 +32,5 @@
 		<%= f.submit %>
 	</p>
 <% end %>
+<%= link_to 'Back', between_index_path %>
 </div>
