@@ -9,9 +9,12 @@
 		<% end %>
 	</div>
 
-	<%= month_calendar do |date| %>
-	  
-	  <%= date.strftime("%d") %>
-	  
-	<% end %>
-</div>
+	<%= month_calendar do |between_date| %>
+	  <% date_output = between_date.strftime("%d") %>
+	  <%= date_output %>
+	  <% between_btn = Between.where(:created_at => (between_date.to_date.beginning_of_day..between_date.to_date.end_of_day)).first %>
+      <% if between_btn %>
+        <br><%= link_to 'Between', between_path(between_btn), class: 'btn btn-default' %>
+      <% end %>
+    <% end %>
+	</div>
